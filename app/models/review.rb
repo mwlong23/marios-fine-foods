@@ -1,3 +1,3 @@
-class Product < ActiveRecord::Base 
+class Review < ActiveRecord::Base 
 
 end
