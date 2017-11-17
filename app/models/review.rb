@@ -1,4 +1,5 @@
 class Review < ActiveRecord::Base
+  belongs_to :product, optional: true
   validates :username, :presence => true
   validates :rating, :presence => true
   validates :review, :presence => true
