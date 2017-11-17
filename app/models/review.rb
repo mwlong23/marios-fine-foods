@@ -1,3 +1,3 @@
-class Product < ActiveRecord::based
+class Product < ActiveRecord::Base 
 
 end
