@@ -1,0 +1,9 @@
+<h1>Welcome to Mario's Specialty Foods</h1>
+
+<h4>Here is a list of our products:</h4>
+
+<ul>
+  <% @products.each do |product| %>
+  <li><%= link_to product.name, product_path(product) %></li>
+  <% end %>
+</ul>
