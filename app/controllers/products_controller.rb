@@ -8,4 +8,15 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     render :show
   end
+
+  def new
+    @product = Product.new
+    render :new
+  end
+
+private
+  def product_params
+    params.require(:product).permit(:name, :description, :country_of_origin, :price, :updated_at, :create_table)
+  end
+
 end
