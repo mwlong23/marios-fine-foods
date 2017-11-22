@@ -9,6 +9,18 @@
   </head>
 
   <body>
-    <%= yield %>
+
+    <div class="container">
+      <% if current_user %>
+        <%= current_user.email %> | <%= link_to "Sign out", '/signout' %>
+      <% else %>
+        <%= link_to "Sign up", 'signup' %> | <%= link_to "Sign in", '/signin' %>
+      <% end %>
+
+      <%= flash[:alert] %>
+      <%= flash[:notice] %>
+
+      <%= yield %>
+    </div>
   </body>
 </html>

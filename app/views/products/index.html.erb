@@ -1,11 +1,14 @@
-<h1>Welcome to Mario's Specialty Foods</h1>
+<div class="container">
+  <h1>Welcome to Mario's Specialty Foods</h1>
 
-<h4>Here is a list of our products:</h4>
+  <h4>Here is a list of our products:</h4>
 
-<ul>
-  <% @products.each do |product| %>
-  <li><%= link_to product.name, product_path(product) %></li>
-  <% end %>
-</ul>
+  <ul>
+    <% @products.each do |product| %>
+    <li><%= link_to product.name, product_path(product) %></li>
+    <% end %>
+  </ul>
 
-  <%= link_to "Add A Product", new_product_path %>
+    <%= link_to "Add A Product", new_product_path %>
+
+</div>

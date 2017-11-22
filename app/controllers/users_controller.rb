@@ -1,19 +1,24 @@
-class SessionsController < ApplicationController
+class UsersController < ApplicationController
+
+  def new
+    @user = User.new
+  end
+
   def create
-    @user = User.authenticate(params[:email], params[:password])
-    if @user
-      flash[:notice] = "You've signed in."
+    @user = User.new(user_params)
+    if @user.save
+      flash[:notice] = "You've successfully signed up!"
       session[:user_id] = @user.id
       redirect_to "/"
     else
-      flash[:alert] = "There was a problem signing in. Please try again."
-      redirect_to signin_path
+      flash[:alert] = "There was a problem signing up."
+      redirect_to '/signup'
     end
   end
 
-  def destroy
-    session[:user_id] = nil
-    flash[:notice] = "You've signed out."
-    redirect_to "/"
+  private
+
+  def user_params
+    params.require(:user).permit(:email, :password, :password_confirmation)
   end
 end
