@@ -1,0 +1,34 @@
+.container .jumbotron, .container-fluid .jumbotron {
+  background-color: black;
+  margin-left: -15px;
+  margin-right: -15px;
+  border-radius: 0px;
+  margin-bottom: 0px;
+  color: white;
+
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+
+.well {
+  border-radius: 0px;
+}
+
+.product {
+  list-style-type: none;
+}
+
+.well.product{
+  background-color: #778899;
+  color: white;
+  opacity: 0.9;
+}

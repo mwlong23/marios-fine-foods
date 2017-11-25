@@ -23,6 +23,9 @@ class ProductsController < ApplicationController
     end
   end
 
+  def destroy
+  end
+
 private
   def product_params
     params.require(:product).permit(:name, :description, :country_of_origin, :price, :updated_at, :create_table)

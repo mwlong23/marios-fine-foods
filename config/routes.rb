@@ -4,6 +4,8 @@ Rails.application.routes.draw do
     resources :reviews
   end
 
+  root :to => 'welcome#index'
+
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
 
