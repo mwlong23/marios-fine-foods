@@ -6,6 +6,25 @@
       Origin: </strong><%=@product.country_of_origin %></h4>
     <h4><strong>Price: $</strong><%=@product.price %></h4>
   </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8">
+        <% @reviews.each do |review| %>
+          <div class="well">
+            <h4 class="product">By: <%= review.username%></h4>
+            <p><%= review.rating %></p>
+            <p><%= review.review %></p>
+            <p><%= review.created_at %></p>
+          </div>
+          <div class="col-sm-4">
+            <img class="thumbnail" src="" alt="">
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+
 
 
 
