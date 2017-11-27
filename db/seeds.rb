@@ -22,7 +22,7 @@ Review.destroy_all
     review = Review.create!(
       username: Faker::DragonBall.character,
       rating: Faker::Number.between(1, 5),
-      review: Faker::RickAndMorty.quote,
+      written_review: Faker::RickAndMorty.quote,
       updated_at: Faker::Date.between(20.days.ago, 2.days.ago),
       created_at: Faker::Date.between_except(1.year.ago, 1.year.from_now, 21.days.ago),
       product_id: product.id)

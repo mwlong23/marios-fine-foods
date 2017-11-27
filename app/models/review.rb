@@ -1,10 +1,10 @@
 class Review < ActiveRecord::Base
-  belongs_to :product, optional: true
+
   validates :username, :presence => true
   validates :rating, :presence => true
-  validates :review, :presence => true
-  validates :created_at, :presence => true
-  validates :updated_at, :presence => true
+  validates :written_review, :presence => true
+  # validates :created_at, :optional => true
+  # validates :updated_at, :optional => true
 
-  belongs_to :users
+  belongs_to :product
 end

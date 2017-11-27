@@ -3,3 +3,7 @@
 <%= render "layouts/errors", :object=>@product %>
 
 <%= render "layouts/form" %>
+
+<p><%= link_to "Delete", product_path(@product),
+                 :data => {:confirm => "You sure?",
+                           :method => "delete"} %></p>

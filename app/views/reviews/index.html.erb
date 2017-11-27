@@ -1,3 +1,16 @@
 <div class="container">
+  <h1>Reviews for <%@product.name%></h1>
+  <br>
+  <br>
+  <% @reviews.each do |review|%>
+  <br>
+  <br>
+    <div class="well">
+      <h4 class="">By: <%= review.username%></h4>
+      <p><%= review.rating %></p>
+      <p><%= review.written_review %></p>
+      <p><%= review.created_at %></p>
+    </div>
+  <%end%>
 
 </div>
