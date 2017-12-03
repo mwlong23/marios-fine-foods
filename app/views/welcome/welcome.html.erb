@@ -12,7 +12,7 @@
     </div>
     <div class="col-sm-5 well">
       <h2>Hot New Products:</h2>
-          <%Product.most_reviews.each do |product|%>
+          <%Product.recently_added.each do |product|%>
             <%= link_to product.name, product_path(product)%>
             <br>
           <% end %>
@@ -24,6 +24,13 @@
             <br>
           <% end %>
     </div>
+    <div class="col-sm-5 well">
+      <h2>Most Reviewed:</h2>
+          <%Product.most_reviewed.each do |product|%>
+            <%= link_to product.name, product_path(product)%>
+            <br>
+          <% end %>
+    </div
 
 
   </div>

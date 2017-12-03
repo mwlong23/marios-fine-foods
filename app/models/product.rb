@@ -5,10 +5,12 @@ class Product < ActiveRecord::Base
   validates :country_of_origin, :presence => true
   validates :price, :presence => true
   has_many :reviews
+  validates :description, :length{:in 50..250}
+  
 
-  scope :made_in_usa, -> { where(country_of_origin: "USA")}
+  scope :made_in_usa, -> { where(country_of_origin: "USA").limit(10)}
 
-  scope :most_reviews, -> {(
+  scope :most_reviewed, -> {(
     select("products.id, products.name, products.description, count(reviews.id) as reviews_count")
     .joins(:reviews)
     .group("products.id")
