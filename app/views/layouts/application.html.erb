@@ -9,16 +9,12 @@
   </head>
 
   <body>
-
       <nav class="navbar navbar-default">
         <div class="container-fluid">
-
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
-
             <a class="navbar-brand" href="/">Home</a>
           </div>
-
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
@@ -28,24 +24,19 @@
               <% if current_user %>
                 <%= current_user.email %> | <%= link_to "Sign out", '/signout' %>
               <% else %>
-              <li><%= link_to "Sign up", 'signup' %></li>
-               <li><%= link_to "Sign in", '/signin' %></li>
-                    <% end %></li>
+                <li><%= link_to "Sign up", 'signup' %></li>
+                <li><%= link_to "Sign in", '/signin' %></li>
+              <% end %>
             </ul>
           </div>
           <div class="jumbotron">
             <h1>Mario's Fine Foods</h1>
           </div>
-        </div><!-- /.container-fluid -->
+        </div>
       </nav>
-      <!-- <footer>
-        <h1>Footer Content</h1>
-      </footer> -->
-
       <%= flash[:alert] %>
       <%= flash[:notice] %>
 
       <%= yield %>
-
   </body>
 </html>

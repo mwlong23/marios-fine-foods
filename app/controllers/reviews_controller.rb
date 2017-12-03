@@ -25,7 +25,7 @@ class ReviewsController < ApplicationController
 
 
     if @review.save
-        binding.pry
+
       redirect_to review_path()
     else
       render :new
