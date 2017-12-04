@@ -32,3 +32,7 @@ footer {
   color: white;
   opacity: 0.9;
 }
+
+.error-message {
+  color: red;
+}
