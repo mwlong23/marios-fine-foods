@@ -57,4 +57,5 @@ describe "the add a product process" do
     click_on 'Create Product'
     expect(page).to have_content 'Price can\'t be blank'
   end
+
 end
