@@ -1,17 +1,19 @@
 <div class="container">
+  <%= render "layouts/errors", :object => @review %>
   <h1>Write a review:</h1>
 
   <%= form_for [@product, @review] do |f|  %>
 
+
   <%= f.label :username %>
   <%=  f.text_field :username %>
-
+  <br>
   <%= f.label :rating %>
   <%=  f.text_field :rating %>
-
+  <br>
   <%= f.label :written_review %>
   <%=  f.text_field :written_review %>
-
+  <br>
   <%= f.submit %>
   <% end %>
 </div>

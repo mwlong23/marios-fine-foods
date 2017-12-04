@@ -18,22 +18,16 @@ class ReviewsController < ApplicationController
   end
 
 
-
   def create
     @product = Product.find(params[:product_id])
-    @review = Review.new(review_params)
-
-
+    @review = @product.reviews.new(review_params)
     if @review.save
-
-      redirect_to review_path()
+      redirect_to product_path(@review.product)
     else
       render :new
     end
   end
 
-  def destroy
-  end
 
   private
     def review_params

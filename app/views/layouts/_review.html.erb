@@ -1,7 +1,7 @@
 <div class="container">
   <h1>Write a review:</h1>
 
-  <%= form_for @review do |f|  %>
+  <%= form_for [@review] do |f|  %>
 
   <%= f.label :username %>
   <%=  f.text_field :username %>
